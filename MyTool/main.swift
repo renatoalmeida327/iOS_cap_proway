@@ -162,36 +162,196 @@ Calculadora.somar(numero1: 5, numero2: 4)
 
 
 // 7o Exemplo - Protocol (Abstração e Interface)
-protocol CalculadoraSimples {
-    func somar( n1: Int, n2: Int) -> Int
-    func subtrair( n1: Int, n2: Int) -> Int
-}
+//protocol CalculadoraSimples {
+//    func somar( n1: Int, n2: Int) -> Int
+//    func subtrair( n1: Int, n2: Int) -> Int
+//}
+//
+//protocol CalculadoraCientifica {
+//    func seno( angulo: Double) -> Double
+//    
+//    func cosseno( angulo: Double) -> Double
+//}
+//
+//
+//
+//class Calc: CalculadoraSimples, CalculadoraCientifica {
+//    func seno(angulo: Double) -> Double {
+//        let radianos = angulo * .pi / 180
+//        return sin(radianos)
+//    }
+//    
+//    func cosseno(angulo: Double) -> Double {
+//        let radianos = angulo * .pi / 180
+//        return cos(radianos)
+//    }
+//    
+//    func somar(n1: Int, n2: Int) -> Int {
+//        return n1 + n2
+//    }
+//    
+//    func subtrair(n1: Int, n2: Int) -> Int {
+//        return n1 - n2
+//    }
+//}
+// let calc = Calc()
 
-protocol CalculadoraCientifica {
-    func seno( angulo: Double) -> Double
-    
-    func cosseno( angulo: Double) -> Double
-}
 
+// 8o Exemplo - Polimorfismo
 
-
-class Calc: CalculadoraSimples, CalculadoraCientifica {
-    func seno(angulo: Double) -> Double {
-        let radianos = angulo * .pi / 180
-        return sin(radianos)
+// Sobrecarga (overloading)
+class Calculos {
+    func somar( n1: Int, n2: Int) {
+        print("A soma dos dois valores é \(n1 + n2)")
     }
     
-    func cosseno(angulo: Double) -> Double {
-        let radianos = angulo * .pi / 180
-        return cos(radianos)
+    func somar( n1: Int, n2: Int, n3: Int) {
+        print("A soma dos dois valores é \(n1 + n2 + n3)")
+    }
+}
+
+let calculos = Calculos()
+calculos.somar(n1: 5, n2: 5)
+calculos.somar(n1: 5, n2: 5, n3: 5)
+
+// Sobrescrita (override)
+class DescontoPadrao {
+    
+    var salario: Double = 0.0
+    
+    func desconto() -> Void {
+        print("O Desconto Padrão será de \(salario * 0.1)")
     }
     
+}
+
+class DescontoTI: DescontoPadrao {
+    override func desconto() -> Void {
+        print("O Desconto para TI será de \(salario * 0.2)")
+    }
+}
+
+let objPadrao = DescontoPadrao()
+objPadrao.salario = 12000
+objPadrao.desconto()
+
+let objTI = DescontoTI()
+objTI.salario = 12000
+objTI.desconto()
+
+
+
+// 10o Exemplo - Extension
+class Calculator {
     func somar(n1: Int, n2: Int) -> Int {
         return n1 + n2
     }
-    
     func subtrair(n1: Int, n2: Int) -> Int {
         return n1 - n2
     }
 }
- let calc = Calc()
+
+extension Calculator {
+    func multiplicar(n1: Int, n2: Int) -> Int {
+        return n1 * n2
+    }
+}
+
+let calc = Calculator()
+print(calc.somar(n1: 7, n2: 7))
+print(calc.multiplicar(n1: 7, n2: 7))
+
+
+
+// 11o Exemplo - Generics
+
+// 1a Etapa -> Criar o protocol
+protocol Cadastravel {
+    var id: Int { get }
+    func exibirDados() -> String
+}
+
+// 2a Etapa -> Criar as classes
+class PessoaCadastravel: Cadastravel {
+    // Atributos
+    var id: Int
+    var nome: String = ""
+    
+    init(id: Int, nome: String) {
+        self.id = id
+        self.nome = nome
+    }
+    
+    // Função
+    func exibirDados() -> String {
+        return "Identificador: \(id) | Nome: \(nome)"
+    }
+}
+
+class ProdutoCadastravel: Cadastravel {
+    // Atributos
+    var id: Int
+    var nome: String = ""
+    
+    init(id: Int, nome: String) {
+        self.id = id
+        self.nome = nome
+    }
+    
+    // Função
+    func exibirDados() -> String {
+        return "Identificador: \(id) | Nome: \(nome)"
+    }
+}
+
+// 3a Etapa -> Criar classe genérica para gerenciar os dados
+class GerenciarDados<T:Cadastravel> {
+    
+    // Vetor genérico
+    private var vetor: [T] = []
+    
+    // Função para efetuar o cadastro
+    func cadastras(obj: T) {
+        vetor.append(obj)
+    }
+    
+    // Função para listar os re=gistros
+    func listar() {
+        for item in vetor {
+            print(item.exibirDados())
+        }
+        print("-------------")
+    }
+}
+
+// 4a Etapa -> Vetores de cada tipo de dado e criar os objetos.
+var vetorPessoas = GerenciarDados<PessoaCadastravel>()
+var vetorProduto = GerenciarDados<ProdutoCadastravel>()
+
+let pessoa1 = PessoaCadastravel(id: 1, nome: "Aline")
+let pessoa2 = PessoaCadastravel(id: 2, nome: "Douglas")
+let pessoa3 = PessoaCadastravel(id: 3, nome: "Fernanda")
+
+let produto1 = ProdutoCadastravel(id: 1, nome: "MackBook Pro M5 16GB")
+let produto2 = ProdutoCadastravel(id: 2, nome: "iPhone 18")
+let produto3 = ProdutoCadastravel(id: 3, nome: "Monitor LG 54 polegadas")
+
+vetorPessoas.cadastras(obj: pessoa1)
+vetorPessoas.cadastras(obj: pessoa2)
+vetorPessoas.cadastras(obj: pessoa3)
+
+vetorProduto.cadastras(obj: produto1)
+vetorProduto.cadastras(obj: produto2)
+vetorProduto.cadastras(obj: produto3)
+
+vetorPessoas.listar()
+vetorProduto.listar()
+
+
+// 12o Exemplo - Struct
+struct People {
+    var nome: String
+    var idade: Int
+}
+
+let p1 = People(nome: "Priscila", idade: 31)
