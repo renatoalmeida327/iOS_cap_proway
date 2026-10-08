@@ -355,3 +355,25 @@ struct People {
 }
 
 let p1 = People(nome: "Priscila", idade: 31)
+
+// Características das Structs em Swift
+
+// 1. Tipo de Valor (Value Type)
+// - Elas são copiadas quando atribuídas a uma nova variável ou passadas para uma função.
+// - Modificar uma cópia não altera a instância original, garantindo mais segurança contra efeitos colaterais.
+
+// 2. Inicializador Padrão Automático (Memberwise Initializer)
+// - O Swift gera automaticamente um inicializador que aceita parâmetros para todas as propriedades.
+// - Não há necessidade de escrever o código do `init` manualmente, a menos que você queira uma lógica customizada.
+
+// 3. Imutabilidade com 'let'
+// - Se uma instância de struct for declarada com `let`, todas as suas propriedades se tornam imutáveis.
+// - Isso acontece mesmo que as propriedades internas tenham sido declaradas com `var`.
+
+// 4. Mutabilidade Explícita (Mutating Methods)
+// - Funções internas que alteram as propriedades da struct precisam da palavra-chave `mutating`.
+// - Isso avisa ao compilador que o método vai modificar o valor da própria estrutura.
+
+// 5. Sem Herança
+// - Structs não podem herdar de outras structs (não existe herança de classe para classe).
+// - No entanto, elas podem adotar e herdar comportamentos através de Protocolos (Protocols).
