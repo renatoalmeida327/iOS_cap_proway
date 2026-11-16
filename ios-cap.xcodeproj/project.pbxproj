@@ -8,12 +8,27 @@
 
 /* Begin PBXFileReference section */
 		000000000000000000000120 /* MyTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MyTool; sourceTree = BUILT_PRODUCTS_DIR; };
+		C653939C3098E0DF0039D91E /* ControleNotasApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ControleNotasApp.xcodeproj; sourceTree = SOURCE_ROOT; };
+		C65393F0309A114A0039D91E /* Projeto Final Navigation 3.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Projeto Final Navigation 3.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		C65CCA8D30A0D171004DCA82 /* ToDoList.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ToDoList.xcodeproj; sourceTree = SOURCE_ROOT; };
+		C68E2E9E30AB315700E4E377 /* GerenciadorEventos.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = GerenciadorEventos.xcodeproj; sourceTree = "<group>"; };
+		C68E2E9F30AB315700E4E377 /* README Gerenciador Eventos.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "README Gerenciador Eventos.md"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		000000000000000000000010 /* POO */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			path = POO;
+			sourceTree = "<group>";
+		};
+		C65393F3309A114A0039D91E /* Projeto Final Navigation 2 */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = "Projeto Final Navigation 2";
+			sourceTree = "<group>";
+		};
+		C65CCA9B30A0D171004DCA82 /* ToDoList */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ToDoList;
 			sourceTree = "<group>";
 		};
 		C6EDA8D6307B0F0B008CAF73 /* projeto1 */ = {
@@ -35,6 +50,13 @@
 		000000000000000000000001 = {
 			isa = PBXGroup;
 			children = (
+				C68E2E9E30AB315700E4E377 /* GerenciadorEventos.xcodeproj */,
+				C68E2E9F30AB315700E4E377 /* README Gerenciador Eventos.md */,
+				C65CCA8D30A0D171004DCA82 /* ToDoList.xcodeproj */,
+				C65CCA9B30A0D171004DCA82 /* ToDoList */,
+				C65393F0309A114A0039D91E /* Projeto Final Navigation 3.xcodeproj */,
+				C65393F3309A114A0039D91E /* Projeto Final Navigation 2 */,
+				C653939C3098E0DF0039D91E /* ControleNotasApp.xcodeproj */,
 				C6EDA8D6307B0F0B008CAF73 /* projeto1 */,
 				000000000000000000000010 /* POO */,
 				000000000000000000000020 /* Products */,
@@ -45,6 +67,34 @@
 			isa = PBXGroup;
 			children = (
 				000000000000000000000120 /* MyTool */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C65393A13098E0DF0039D91E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C65393F4309A114A0039D91E /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C65CCA9C30A0D171004DCA82 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C68E2EA030AB315700E4E377 /* Products */ = {
+			isa = PBXGroup;
+			children = (
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -63,6 +113,8 @@
 			);
 			fileSystemSynchronizedGroups = (
 				000000000000000000000010 /* POO */,
+				C65393F3309A114A0039D91E /* Projeto Final Navigation 2 */,
+				C65CCA9B30A0D171004DCA82 /* ToDoList */,
 				C6EDA8D6307B0F0B008CAF73 /* projeto1 */,
 			);
 			name = MyTool;
@@ -97,6 +149,24 @@
 			preferredProjectObjectVersion = 90;
 			productRefGroup = 000000000000000000000020 /* Products */;
 			projectDirPath = "";
+			projectReferences = (
+				{
+					ProductGroup = C65393A13098E0DF0039D91E /* Products */;
+					ProjectRef = C653939C3098E0DF0039D91E /* ControleNotasApp.xcodeproj */;
+				},
+				{
+					ProductGroup = C68E2EA030AB315700E4E377 /* Products */;
+					ProjectRef = C68E2E9E30AB315700E4E377 /* GerenciadorEventos.xcodeproj */;
+				},
+				{
+					ProductGroup = C65393F4309A114A0039D91E /* Products */;
+					ProjectRef = C65393F0309A114A0039D91E /* Projeto Final Navigation 3.xcodeproj */;
+				},
+				{
+					ProductGroup = C65CCA9C30A0D171004DCA82 /* Products */;
+					ProjectRef = C65CCA8D30A0D171004DCA82 /* ToDoList.xcodeproj */;
+				},
+			);
 			projectRoot = "";
 			targets = (
 				000000000000000100000000 /* MyTool */,
