@@ -6,13 +6,29 @@
 	objectVersion = 90;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		C68E2F0E30AB330400E4E377 /* Evento.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68E2F0030AB330400E4E377 /* Evento.swift */; };
+		C68E2F0F30AB330400E4E377 /* EventoFormView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68E2F0530AB330400E4E377 /* EventoFormView.swift */; };
+		C68E2F1030AB330400E4E377 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68E2F0430AB330400E4E377 /* ContentView.swift */; };
+		C68E2F1130AB330400E4E377 /* EventoRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68E2EFE30AB330400E4E377 /* EventoRowView.swift */; };
+		C68E2F1230AB330400E4E377 /* GerenciadorEventosApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68E2EFC30AB330400E4E377 /* GerenciadorEventosApp.swift */; };
+		C68E2F1330AB330400E4E377 /* EventoViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C68E2F0230AB330400E4E377 /* EventoViewModel.swift */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXFileReference section */
 		000000000000000000000120 /* MyTool */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = MyTool; sourceTree = BUILT_PRODUCTS_DIR; };
 		C653939C3098E0DF0039D91E /* ControleNotasApp.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ControleNotasApp.xcodeproj; sourceTree = SOURCE_ROOT; };
 		C65393F0309A114A0039D91E /* Projeto Final Navigation 3.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Projeto Final Navigation 3.xcodeproj"; sourceTree = SOURCE_ROOT; };
 		C65CCA8D30A0D171004DCA82 /* ToDoList.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = ToDoList.xcodeproj; sourceTree = SOURCE_ROOT; };
-		C68E2E9E30AB315700E4E377 /* GerenciadorEventos.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = GerenciadorEventos.xcodeproj; sourceTree = "<group>"; };
-		C68E2E9F30AB315700E4E377 /* README Gerenciador Eventos.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "README Gerenciador Eventos.md"; sourceTree = "<group>"; };
+		C68E2EFB30AB330400E4E377 /* Gerenciador de Eventos.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "Gerenciador de Eventos.xcodeproj"; sourceTree = SOURCE_ROOT; };
+		C68E2EFC30AB330400E4E377 /* GerenciadorEventosApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GerenciadorEventosApp.swift; sourceTree = "<group>"; };
+		C68E2EFE30AB330400E4E377 /* EventoRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoRowView.swift; sourceTree = "<group>"; };
+		C68E2F0030AB330400E4E377 /* Evento.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Evento.swift; sourceTree = "<group>"; };
+		C68E2F0230AB330400E4E377 /* EventoViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoViewModel.swift; sourceTree = "<group>"; };
+		C68E2F0430AB330400E4E377 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		C68E2F0530AB330400E4E377 /* EventoFormView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EventoFormView.swift; sourceTree = "<group>"; };
+		C68E2F0830AB330400E4E377 /* GerenciadorEventos 2.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; path = "GerenciadorEventos 2.xcodeproj"; sourceTree = "<group>"; };
+		C68E2F0930AB330400E4E377 /* README 2.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = "README 2.md"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -50,8 +66,10 @@
 		000000000000000000000001 = {
 			isa = PBXGroup;
 			children = (
-				C68E2E9E30AB315700E4E377 /* GerenciadorEventos.xcodeproj */,
-				C68E2E9F30AB315700E4E377 /* README Gerenciador Eventos.md */,
+				C68E2EFB30AB330400E4E377 /* Gerenciador de Eventos.xcodeproj */,
+				C68E2F0730AB330400E4E377 /* GerenciadorEventos */,
+				C68E2F0830AB330400E4E377 /* GerenciadorEventos 2.xcodeproj */,
+				C68E2F0930AB330400E4E377 /* README 2.md */,
 				C65CCA8D30A0D171004DCA82 /* ToDoList.xcodeproj */,
 				C65CCA9B30A0D171004DCA82 /* ToDoList */,
 				C65393F0309A114A0039D91E /* Projeto Final Navigation 3.xcodeproj */,
@@ -92,7 +110,67 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		C68E2EA030AB315700E4E377 /* Products */ = {
+		C68E2EFD30AB330400E4E377 /* App */ = {
+			isa = PBXGroup;
+			children = (
+				C68E2EFC30AB330400E4E377 /* GerenciadorEventosApp.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		C68E2EFF30AB330400E4E377 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+				C68E2EFE30AB330400E4E377 /* EventoRowView.swift */,
+			);
+			path = Components;
+			sourceTree = "<group>";
+		};
+		C68E2F0130AB330400E4E377 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				C68E2F0030AB330400E4E377 /* Evento.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		C68E2F0330AB330400E4E377 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				C68E2F0230AB330400E4E377 /* EventoViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
+		C68E2F0630AB330400E4E377 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				C68E2F0430AB330400E4E377 /* ContentView.swift */,
+				C68E2F0530AB330400E4E377 /* EventoFormView.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		C68E2F0730AB330400E4E377 /* GerenciadorEventos */ = {
+			isa = PBXGroup;
+			children = (
+				C68E2EFD30AB330400E4E377 /* App */,
+				C68E2EFF30AB330400E4E377 /* Components */,
+				C68E2F0130AB330400E4E377 /* Models */,
+				C68E2F0330AB330400E4E377 /* ViewModels */,
+				C68E2F0630AB330400E4E377 /* Views */,
+			);
+			path = GerenciadorEventos;
+			sourceTree = "<group>";
+		};
+		C68E2F0A30AB330400E4E377 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C68E2F0C30AB330400E4E377 /* Products */ = {
 			isa = PBXGroup;
 			children = (
 			);
@@ -155,8 +233,12 @@
 					ProjectRef = C653939C3098E0DF0039D91E /* ControleNotasApp.xcodeproj */;
 				},
 				{
-					ProductGroup = C68E2EA030AB315700E4E377 /* Products */;
-					ProjectRef = C68E2E9E30AB315700E4E377 /* GerenciadorEventos.xcodeproj */;
+					ProductGroup = C68E2F0C30AB330400E4E377 /* Products */;
+					ProjectRef = C68E2EFB30AB330400E4E377 /* Gerenciador de Eventos.xcodeproj */;
+				},
+				{
+					ProductGroup = C68E2F0A30AB330400E4E377 /* Products */;
+					ProjectRef = C68E2F0830AB330400E4E377 /* GerenciadorEventos 2.xcodeproj */;
 				},
 				{
 					ProductGroup = C65393F4309A114A0039D91E /* Products */;
@@ -178,6 +260,12 @@
 		000000000000000120000000 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			files = (
+				C68E2F0E30AB330400E4E377 /* Evento.swift in Sources */,
+				C68E2F0F30AB330400E4E377 /* EventoFormView.swift in Sources */,
+				C68E2F1030AB330400E4E377 /* ContentView.swift in Sources */,
+				C68E2F1130AB330400E4E377 /* EventoRowView.swift in Sources */,
+				C68E2F1230AB330400E4E377 /* GerenciadorEventosApp.swift in Sources */,
+				C68E2F1330AB330400E4E377 /* EventoViewModel.swift in Sources */,
 			);
 		};
 /* End PBXSourcesBuildPhase section */
